@@ -1,0 +1,61 @@
+using System;
+
+class Program
+{
+
+    static void Main()
+    { 
+        Console.Write("Input the number of elements to be stored in the array: ");
+        string? input = Console.ReadLine();
+        if (!int.TryParse(input, out int n) || n <= 0)
+        {
+            Console.WriteLine("Invalid input. Please enter a positive integer.");
+            return;
+        }
+
+        int[] arr = new int[n];
+        int[] evens = new int[n];
+        int[] odds = new int[n];
+        int evenIndex = 0, oddIndex = 0;
+
+        Console.WriteLine("Input {0} elements in the array:", n);
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"element - {i} : ");
+            string? elementInput = Console.ReadLine();
+            if (int.TryParse(elementInput, out int value))
+            {
+                arr[i] = value;
+
+                
+                if (arr[i] % 2 == 0)
+                {
+                    evens[evenIndex++] = arr[i];
+                }
+                else
+                {
+                    odds[oddIndex++] = arr[i];
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter an integer.");
+                i--; 
+            }
+        }
+
+        
+        Console.WriteLine("\nThe Even elements are:");
+        for (int i = 0; i < evenIndex; i++)
+        {
+            Console.Write(evens[i] + " ");
+        }
+
+        
+        Console.WriteLine("\nThe Odd elements are:");
+        for (int i = 0; i < oddIndex; i++)
+        {
+            Console.Write(odds[i] + " ");
+        }
+    }
+}
