@@ -1,0 +1,44 @@
+using System;
+
+class Ques1
+{
+    static void MoveZerosToEnd(int[] arr)
+    {
+        int n = arr.Length;
+        int index = 0; 
+
+        
+        for (int i = 0; i < n; i++)
+        {
+            
+            if (arr[i] != 0)
+            {
+                arr[index++] = arr[i];
+            }
+        }
+
+        
+        while (index < n)
+        {
+            arr[index++] = 0;
+        }
+    }
+
+    static void Main()
+    {
+       
+        int[] arr1 = { 1, 2, 0, 4, 3, 0, 5, 1 };
+        MoveZerosToEnd(arr1);
+        Console.WriteLine("Output: " + string.Join(", ", arr1));
+
+        
+        int[] arr2 = { 10, 20, 30 };
+        MoveZerosToEnd(arr2);
+        Console.WriteLine("Output: " + string.Join(", ", arr2));
+
+        
+        int[] arr3 = { 0, 0 };
+        MoveZerosToEnd(arr3);
+        Console.WriteLine("Output: " + string.Join(", ", arr3));
+    }
+}
