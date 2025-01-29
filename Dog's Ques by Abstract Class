@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TrainingDay1
+{
+    public abstract class Animal
+    {
+        public string Name { get; set; }
+
+
+        public void SetName(string name)
+        {
+            Name = name;
+        }
+        public string GetName()
+        {
+            return Name;
+
+        }
+        public abstract void Eat();
+    }
+
+    public class Dog : Animal
+    {
+        public override void Eat()
+        {
+            Console.WriteLine($"The Dog is Eating.");
+        }
+
+    }
+    public class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Enter the Dog's name:");
+            string dogName = Console.ReadLine();
+            Dog myDog = new Dog();
+            myDog.SetName(dogName);
+
+            Console.WriteLine("Dog's Name: " + myDog.GetName());
+            myDog.Eat();
+
+        }
+    }
+}
