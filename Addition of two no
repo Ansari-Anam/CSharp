@@ -1,5 +1,5 @@
 Write a program to add two numbers in C#
-*Console.WriteLine("Welcome");
+Console.WriteLine("Welcome");
 Console.WriteLine("Enter the first Number:");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter the Second Number:");
