@@ -44,15 +44,5 @@ namespace WiproTraining
       
         }
 
-       
-        public static void Main()
-        {
-            File_Handling file = new File_Handling("Priyanshi", 21, "Student", 11548);
-            file.CreatePerson();
-            file.ReadPerson();
-
-        }
-
-
     }
 }
