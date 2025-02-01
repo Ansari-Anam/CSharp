@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WiproTraining
+{
+
+    class ProbOnArray
+    {
+        static void Main()
+        {
+
+            string[] input = { "apple1", "banana2", "cherry3" };
+            string concatenatedString = string.Concat(input);
+            Console.WriteLine($"• Concatenated String: {concatenatedString}");
+
+            List<int> extractedNumbers = concatenatedString
+                .Where(char.IsDigit)
+                .Select(c => int.Parse(c.ToString()))
+                .ToList();
+
+            Console.WriteLine($"• Extracted Numbers: [{string.Join(", ", extractedNumbers)}]");
+
+
+            int maxNumber = extractedNumbers.Max();
+            int minNumber = extractedNumbers.Min();
+
+            Console.WriteLine($"• Maximum Number: {maxNumber}");
+            Console.WriteLine($"• Minimum Number: {minNumber}");
+
+
+            int difference = maxNumber - minNumber;
+            Console.WriteLine($"• Difference: {difference}");
+        }
+    }
+
+}
