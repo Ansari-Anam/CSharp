@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace WiproTraining
+{
+    internal class File_Handling
+    {
+
+        public string Name {  get; set; }
+        public int Age {  get; set; }
+        public string Profession {  get; set; }
+        public int Id {  get; set; }
+
+        public File_Handling(string name, int age, string prof, int id) 
+        {   
+            Name = name;
+            Age = age;
+            Profession = prof;
+            Id = id;
+        }
+
+        public void CreatePerson()
+        {
+            FileStream cp = new FileStream("Person.txt", FileMode.Create, FileAccess.Write);
+            StreamWriter write = new StreamWriter(cp);
+            write.WriteLine("Name:" + Name);
+            write.WriteLine("Age:" + Age);
+            write.WriteLine("Profession:" + Profession);
+            write.WriteLine("Id:" + Id);
+            write.Close();
+            cp.Close();
+        }
+        public void ReadPerson()
+        {
+            FileStream cp = new FileStream("Person.txt",FileMode.Open,FileAccess.Read);
+            StreamReader sr = new StreamReader(cp);
+            Console.WriteLine(sr.ReadToEnd());
+            sr.Close();
+            cp.Close();
+      
+        }
+
+       
+        public static void Main()
+        {
+            File_Handling file = new File_Handling("Priyanshi", 21, "Student", 11548);
+            file.CreatePerson();
+            file.ReadPerson();
+
+        }
+
+
+    }
+}
