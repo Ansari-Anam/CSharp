@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WiproTraining
+{
+    public class Unique_Character_In_string
+    {
+        
+    
+        public string GetUniqueCharacters(string str)
+        {
+            HashSet<char> seen = new HashSet<char>();
+            StringBuilder uniqueChars = new StringBuilder();
+
+            foreach (char ch in str)
+            {
+                if (!seen.Contains(ch))
+                {
+                    seen.Add(ch);
+                    uniqueChars.Append(ch);
+                }
+            }
+
+            return uniqueChars.ToString();
+        }
+    }
+}
