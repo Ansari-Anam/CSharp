@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WiproTraining
+{
+    public class Duplicate_Elements_In_String
+    {
+        public string FindDuplicateCharacters(string str)
+        {
+            Dictionary<char, int> charCount = new Dictionary<char, int>();
+            HashSet<char> duplicates = new HashSet<char>();
+
+            foreach (char ch in str)
+            {
+                if (charCount.ContainsKey(ch))
+                {
+                    charCount[ch]++;
+                    duplicates.Add(ch); 
+                }
+                else
+                {
+                    charCount[ch] = 1;
+                }
+            }
+
+            return new string(string.Join("", duplicates).ToCharArray());
+        }
+    }
+}
