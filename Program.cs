@@ -26,10 +26,50 @@ namespace WiproTraining
             */
 
 
-            // Day 6 Hands On Ques 1 On arrays 
+            // Second Largest Element in an Array -> Day 6
             //SecondLargest secondLargest = new SecondLargest();
             //int[] arr = { 12, 35, 1, 10, 34, 1 };
             //Console.WriteLine(secondLargest.FindSecondLargest(arr));
+
+
+
+             //Maximum consecutive one’s (or zeros) in a binary array -> day 6
+             //Consecutive_Binary consecutive_Binary = new Consecutive_Binary();
+             //int[] arr = { 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1 };
+             //Console.WriteLine(consecutive_Binary.MaxConsecutiveOnes(arr));
+
+
+
+             // Missing and Repeating in an Array -> Day6
+             //Missing_And_Repeating missing_And_Repeating = new Missing_And_Repeating();
+             //int[] arr = { 3, 1, 3 };
+             //int n = arr.Length;
+             //missing_And_Repeating.FindMissingAndRepeating(arr,n);
+
+
+
+            //Find the Duplicate character in a string -> Day6
+            //Duplicate_Elements_In_String duplicate = new Duplicate_Elements_In_String();
+            //Console.WriteLine("Enter A String:");
+            //string str = Console.ReadLine();
+            //Console.WriteLine(duplicate.FindDuplicateCharacters(str));
+
+
+
+
+              //  Get all unique characters in a string -> Day6
+              //Unique_Character_In_string unique = new Unique_Character_In_string();
+              //Console.WriteLine("Enter a String:");
+              //string s = Console.ReadLine();
+              //Console.WriteLine(unique.GetUniqueCharacters(s));
+
+
+
+              //Reverse each word of the sentence (string) -> Day6
+              //Reverse_Each_Word rev = new Reverse_Each_Word();
+              //Console.WriteLine("Enter a String:");
+              //string s = Console.ReadLine();
+              //Console.WriteLine(rev.ReverseEachWord(s));
 
 
             // For Practice 
@@ -41,6 +81,7 @@ namespace WiproTraining
             //compiler will evaluate it as string not adding twon integers 
             //    so if you want to get 8 instead of 44 apply ()
             //Console.WriteLine("The Nuumber Of candies You wanted is: "+ (can+4));
+            
         }
 
     }
@@ -48,11 +89,8 @@ namespace WiproTraining
 }
 
 
- // Select the content then press ctrl+/
-// To give space to the entire code,then press alt+ctrl+take the cursor to the starting of every line
-// then release your hands from the keys and press space
+ 
 
-//  if I copy the code and with unselecting the code I press ctrl+D then it will replicate 
-//  the entire code that I have copied
+
 
 
