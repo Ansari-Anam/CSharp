@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using WiproTraining;
+
+namespace WiproTraining
+{
+    public class SecondLargest
+    {
+        public int FindSecondLargest(int[] arr)
+        {
+            int largest = int.MinValue, secondLargest = int.MinValue;
+
+            foreach (int num in arr)
+            {
+                if (num > largest)
+                {
+                    secondLargest = largest;
+                    largest = num;
+                }
+                else if (num > secondLargest && num < largest)
+                {
+                    secondLargest = num;
+                }
+            }
+
+            return secondLargest;
+
+        }
+    }
+
+}
+
