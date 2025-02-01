@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WiproTraining
+{
+    internal class Reverse_Each_Word
+    {
+        public string ReverseEachWord(string sentence)
+        {
+            string[] words = sentence.Split(' '); 
+            for (int i = 0; i < words.Length; i++)
+            {
+                char[] wordArray = words[i].ToCharArray();
+                Array.Reverse(wordArray); 
+                words[i] = new string(wordArray);
+            }
+            return string.Join(" ", words); 
+        }
+    }
+}
