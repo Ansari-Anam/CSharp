@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WiproTraining
+{
+    public class Missing_And_Repeating
+    {
+        public void FindMissingAndRepeating(int[] arr, int n)
+        {
+            int repeating = -1, missing = -1;
+
+
+            for (int i = 0; i < n; i++)
+            {
+                int index = Math.Abs(arr[i]) - 1;
+
+
+                if (arr[index] < 0)
+                    repeating = Math.Abs(arr[i]);
+                else
+                    arr[index] = -arr[index];
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] > 0)
+                {
+                    missing = i + 1;
+                    break;
+                }
+            }
+
+            Console.WriteLine($"Missing = {missing}, Repeating = {repeating}");
+        }
+    }
+
+}
+    
+
