@@ -1,0 +1,37 @@
+namespace TestProject1
+{
+    public class Student
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public int GetCount(List<Student> students)
+        {
+            return students.Count();
+
+        }
+
+    }
+
+    // to run the program:-> right click on the screen and select Run Test option....
+
+    public class UnitTest1
+    {
+        [Fact]
+        public void Test1()
+        {
+                Student student = new Student();
+                List<Student> list = new List<Student>()
+                {
+                    new Student() { Id = 1, Name ="A"},
+                    new Student() { Id = 1, Name = "A" },
+                    new Student() { Id = 1, Name = "A" }
+                };
+                Assert.Equal(3,student.GetCount(list));
+
+
+
+
+        }
+    }
+}
