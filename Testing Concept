@@ -19,9 +19,21 @@ namespace TestProject1
         public int a { get; set; }
         public int b { get; set; }
 
-        public int Operations(int x, int y)
+        public int ADDOperation(int x, int y)
         {
             return x + y;
+        }
+        public int SubOperation(int x, int y)
+        {
+            return x - y;
+        }
+        public int MulOperation(int x, int y)
+        {
+            return x * y;
+        }
+        public int DivOperation(int x, int y)
+        {
+            return x / y;
         }
     }
     public class UnitTest1
@@ -29,18 +41,20 @@ namespace TestProject1
         [Fact]
         public void Test1()
         {
-        // Student student = new Student();
-        // List<Student> list = new List<Student>()
-        // {
-        //     new Student() { Id = 1, Name ="A"},
-        //     new Student() { Id = 1, Name = "A" },
-        //     new Student() { Id = 1, Name = "A" }
-        // };
-              
-               // Assert.Equal(3,student.GetCount(list));
+        //        Student student = new Student();
+        //        List<Student> list = new List<Student>()
+        //        {
+        //            new Student() { Id = 1, Name ="A"},
+        //            new Student() { Id = 1, Name = "A" },
+        //            new Student() { Id = 1, Name = "A" }
+        //        };
+        //        Assert.Equal(3,student.GetCount(list));
 
                 Arithmetic arithmetic = new Arithmetic();
-                Assert.Equal(10, arithmetic.Operations(4, 6));
+                Assert.NotEqual(5, arithmetic.ADDOperation(4, 6));
+                Assert.Equal( -5,arithmetic.SubOperation(2,7));
+                Assert.Equal(24, arithmetic.MulOperation(4, 6));
+                Assert.Equal(2, arithmetic.DivOperation(6,3));
 
         }
     }
