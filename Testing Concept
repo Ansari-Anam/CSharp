@@ -1,36 +1,46 @@
 namespace TestProject1
 {
-    public class Student
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
+    //public class Student
+    //{
+    //    public int Id { get; set; }
+    //    public string Name { get; set; }
 
-        public int GetCount(List<Student> students)
-        {
-            return students.Count();
+    //    public int GetCount(List<Student> students)
+    //    {
+    //        return students.Count();
 
-        }
+    //    }
 
-    }
+    //}
 
     // to run the program:-> right click on the screen and select Run Test option....
+    public class Arithmetic
+    {
+        public int a { get; set; }
+        public int b { get; set; }
 
+        public int Operations(int x, int y)
+        {
+            return x + y;
+        }
+    }
     public class UnitTest1
     {
         [Fact]
         public void Test1()
         {
-                Student student = new Student();
-                List<Student> list = new List<Student>()
-                {
-                    new Student() { Id = 1, Name ="A"},
-                    new Student() { Id = 1, Name = "A" },
-                    new Student() { Id = 1, Name = "A" }
-                };
-                Assert.Equal(3,student.GetCount(list));
+        // Student student = new Student();
+        // List<Student> list = new List<Student>()
+        // {
+        //     new Student() { Id = 1, Name ="A"},
+        //     new Student() { Id = 1, Name = "A" },
+        //     new Student() { Id = 1, Name = "A" }
+        // };
+              
+               // Assert.Equal(3,student.GetCount(list));
 
-
-
+                Arithmetic arithmetic = new Arithmetic();
+                Assert.Equal(10, arithmetic.Operations(4, 6));
 
         }
     }
